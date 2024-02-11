@@ -1,4 +1,4 @@
-FROM ubuntu
-RUN apt update -y && apt install apache2 -y
-ADD . /var/www/html
-ENTRYPOINT apachectl -D FOREGROUND
+FROM ubuntu:20.04
+RUN apt update && apt install -y apache2
+ADD ./html /var/www/html
+ENTRYPOINT ["apachectl", "-D", "FOREGROUND"]
