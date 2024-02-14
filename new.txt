@@ -1,3 +1,4 @@
 ---
  - name: all
  - tag: docker
+ - package: ubuntu
